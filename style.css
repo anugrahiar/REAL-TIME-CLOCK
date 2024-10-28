@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #2193b0, #6dd5ed); /* Cool blue gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white; /* White text for better visibility */
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger font size for the header */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+#time {
+    background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent background */
+    color: #333; /* Dark text color for contrast */
+    font-size: 4rem; /* Larger font size for time */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center;
+    padding: 30px; /* Increased padding for a spacious feel */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+/* Hover effect for the time display */
+#time:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Slightly smaller on mobile */
+    }
+
+    #time {
+        font-size: 3rem; /* Slightly smaller on mobile */
+        padding: 20px; /* Adjust padding on mobile */
+    }
+}

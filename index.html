@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Real Time Clock</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div>
+        <h1>THE CURRENT TIME IS GIVEN BELOW</h1>
+        <div id="time"></div>
+        <script>
+        function getTime(){
+            const currentTime = new Date();
+            let hours = currentTime.getHours();
+            let minutes = currentTime.getMinutes();
+            let seconds = currentTime.getSeconds();
+            let amorpm="PM"
+            if(hours>12){
+                hours=hours-12;
+            }
+            else{
+                amorpm="AM";
+            }
+            document.getElementById("time").innerText=hours+':'+minutes+':'+seconds+' '+amorpm;
+        }
+        getTime();
+        setInterval(getTime, 1000);
+        </script>
+        
+    </div>
+</body>
+</html>
